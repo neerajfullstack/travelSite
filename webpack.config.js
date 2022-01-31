@@ -1,6 +1,7 @@
 const path = require('path');
 const postCSSPlugin = [
     require('postcss-import'),
+    require('postcss-mixins'),
     require('postcss-simple-vars'),
     require('postcss-nested'),
     require('autoprefixer')
@@ -15,7 +16,8 @@ module.exports = {
         watchFiles: ['./app/**/**.html', './app/**/&*.css', './app/**/*.js'],
         static: './app',
         hot: true,
-        port: 3000
+        port: 3000,
+        host: '0.0.0.0'
     },
     mode: 'development',
     module: {
